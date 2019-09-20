@@ -1,45 +1,52 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import './index.css';
 // import MyComponent from './module';
 // import MyButton from './module';
-import { render as renderJSX } from 'react-dom';
+// import { render as renderJSX } from 'react-dom';
 import MyButton from './MyButton';
-import MyList from './MyList';
+// import MyList from './MyList';
 
-const appState = {
-    text : 'My Button',
-    disabled : true,
-    items : [
-        'First',
-        'Second',
-        'Third'
-    ],
-};
 
-function render(props){
-    renderJSX((
-        <main>
-            <MyButton>
-                text = {props.text}
-                disabled = {props.disabled}
-            </MyButton>
-
-            <MyList items={props.items}/>
-        </main>
-    ),
+ReactDOM.render(
+    (<MyButton/>),
     document.getElementById('root')
-    );
-}
+)
+   
 
-render(appState);
+// const appState = {
+//     text : 'My Button',
+//     disabled : true,
+//     items : [
+//         'First',
+//         'Second',
+//         'Third'
+//     ],
+// };
 
-setTimeout(()=>{
-    appState.disabled = false;
-    appState.items.push('Fourth');
+// function render(props){
+//     renderJSX((
+//         <main>
+//             <MyButton>
+//                 text = {props.text}
+//                 disabled = {props.disabled}
+//             </MyButton>
 
-    render(appState);
-},4000)
+//             <MyList items={props.items}/>
+//         </main>
+//     ),
+//     document.getElementById('root')
+//     );
+// }
+
+// render(appState);
+
+// setTimeout(()=>{
+//     appState.disabled = false;
+//     appState.items.push('Fourth');
+
+//     render(appState);
+// },4000)
 
 // ReactDOM.render(
 //     (<MyButton/>),
