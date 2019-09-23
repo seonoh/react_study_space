@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,  // 소스맵(*.map) 파일 생성 여부
+        "jsx": "react",  // Resolve: Cannot use JSX unless '--jsx' flag is provided
+        "esModuleInterop": true,
+        "typescript.tsc.autoDetect": "off"
+      },
+    "exclude" : [
+        "node_modules",
+        "**/*.spec.ts",
+        "node_modules",
+        "dest",
+        "android",  
+        "ios",
+        "acceptance-tests",
+        ".jest",
+        "src/setupTests.ts",
+        "./node_modules/**/*"
+    ],
+    "include" : ["./App.jsx"]
+}
