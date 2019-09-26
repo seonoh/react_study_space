@@ -5,12 +5,15 @@ import styles from '../styles'
 
 class UserHeaderView extends Component {
     render() {
+        const { name } = this.props;
+        const { image } = this.props;
         return (
             <View style = {styles.container}>
-                <CircleImageView/>
+                <CircleImageView
+                    image = {image}/>
                 <Text style = {
                     styles.text
-                }>asdasdas</Text>
+                }>{name}</Text>
             </View>
         )
     }

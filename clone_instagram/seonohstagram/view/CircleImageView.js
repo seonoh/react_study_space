@@ -3,9 +3,10 @@ import React,{ Component } from 'react'
 
 class CircleImageView extends Component{
     render(){
+        const { image } = this.props;
         return(
             <Image
-                source = {require('../ts.jpeg')}
+                source = {{ uri: `${image}`}}
                 style = {{
                     width : 30, 
                     height : 30, 
