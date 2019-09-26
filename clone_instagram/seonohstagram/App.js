@@ -1,23 +1,13 @@
-import React from 'react';
-import styles from './styles'
-import CircleImageView from './view/CircleImageView'
-import UserHeaderView from './view/UserHeaderView'
-import { View, FlatList ,Text} from 'react-native'
+import HomeScreen from './HomeScreen'
+import SearchScreen from './SearchScreen'
+import { createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 
-const data = new Array(3)
-  .fill(null)
-  .map((v, i) => ({ key: i.toString(), value: `Item ${i}` }));
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View>
-        <FlatList
-          data={data}
-          renderItem={({ item }) => (
-            <UserHeaderView />
-          )} />
-      </View>
-    )
-  }
-}
+
+const TabNavigator = createBottomTabNavigator({
+  Home: HomeScreen,
+  Search: SearchScreen,
+});
+
+export default createAppContainer(TabNavigator);
