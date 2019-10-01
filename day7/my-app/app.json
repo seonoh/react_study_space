@@ -23,6 +23,9 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android":{
+      "package":"com.eamcoding.sharedpreferencetest"
+    },
     "ios": {
       "supportsTablet": true
     }

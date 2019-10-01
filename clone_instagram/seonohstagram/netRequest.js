@@ -42,3 +42,5 @@ exports.getContents = async()=>{
     return contentsList;
 }
 
+export default getContents
+
