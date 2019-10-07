@@ -1,4 +1,6 @@
 import utils from './utils'
+import {ContentsModel} from './ContentsModel'
+
 
 let axiosModule = require('axios')
 let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2NTkyIiwibGFuZyI6MSwib3MiOjEsImNvdW50cnk"
@@ -19,7 +21,8 @@ exports.getContents = async()=>{
     result = result['data']['contents'];
 
     for (let i = 0; i < result.length; i++) {
-        let contentsItem = utils.createContentsModel(
+        console.log('test','@#@# : '+result[i]["contents-id"])
+        let contentsItem = new ContentsModel(
             result[i]["contents-id"],
             result[i]["wenwo-user-id"],
             result[i]["position"],
@@ -36,11 +39,12 @@ exports.getContents = async()=>{
             result[i]["like-count"],
             result[i]["is-like"]
         )
+        console.log('test','^^^^ : '+contentsItem.wenwoUserId)
         contentsList.push(contentsItem)
     }
 
     return contentsList;
 }
 
-export default getContents
+// export default getContents
 

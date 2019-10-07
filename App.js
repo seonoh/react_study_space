@@ -25,17 +25,15 @@ import {
 //   DebugInstructions,
 //   ReloadInstructions,
 // } from 'react-native/Libraries/NewAppScreen';
-// const createLibraryModule = require('create-react-native-module');
+const createLibraryModule = require('create-react-native-module');
 var SharedPreferences = require('react-native-shared-preferences');
-// import ToastExample from './ToastExample';
-
 
 const App = () => {
-  // createLibraryModule({
-  //   name: 'MyFancyLibraryModule'
-  // }).then(() => {
-  //   console.log('Oh yay! My library module has been created!');
-  // })
+  createLibraryModule({
+    name: 'MyFancyLibraryModule'
+  }).then(() => {
+    console.log('Oh yay! My library module has been created!');
+  })
 
   return (
   <View style={styles.container}>
@@ -45,6 +43,7 @@ const App = () => {
 
     </Button>
     <Text>Open up App.js to start working on your app!</Text>
+
 
     <Button
       title="불러오기"

@@ -1,36 +1,44 @@
-export default class ContentsModel {
+export class ContentsModel {
     constructor(
-        contentsId,
-        wenwoUserId,
-        position,
-        level,
-        profileImage,
-        certificationType,
-        contentsImageCount,
-        title,
-        si,
-        gu,
-        dong,
-        mainImage,
-        viewCount,
-        likeCount,
-        isLike
+        sendedContentsId: string,
+        sendedWenwoUserId: number,
+        sendedPosition: number,
+        sendedLevel: number,
+        sendedProfileImage: string,
+        sendedCertificationType: number,
+        sendedContentsImageCount: number,
+        sendedTitle: string,
+        sendedSi: string,
+        sendedGu: string,
+        sendedDong: string,
+        sendedMainImage: string,
+        sendedViewCount: number,
+        sendedLikeCount: string,
+        sendedIsLike: boolean
     ) {
+        let contentsModel = Object();
+        contentsModel.id = sendedContentsId
+        contentsModel.contentsId = sendedContentsId
+        contentsModel.wenwoUserId = sendedWenwoUserId
+        contentsModel.position = sendedPosition
+        contentsModel.level = sendedLevel
+        contentsModel.profileImage = sendedProfileImage
+        contentsModel.certificationType = sendedCertificationType
+        contentsModel.contentsImageCount = sendedContentsImageCount
+        contentsModel.title = sendedTitle
+        contentsModel.si = sendedSi
+        contentsModel.gu = sendedGu
+        contentsModel.dong = sendedDong
+        contentsModel.mainImage = sendedMainImage
+        contentsModel.viewCount = sendedViewCount
+        contentsModel.likeCount = sendedLikeCount
+        contentsModel.isLike = sendedIsLike
+
+        return contentsModel
+
     }
-    private contentsId : any
-    private wenwoUserId : any
-    private position : any
-    private level : any
-    private profileImage : any
-    private certificationType : any
-    private contentsImageCount : any
-    private title : any
-    private si : any
-    private gu : any
-    private dong : any
-    private mainImage : any
-    private viewCount : any
-    private likeCount : any
-    private isLike : any;
+
 
 }
+
+export default ContentsModel
